@@ -1,13 +1,12 @@
-function App() {
+import NavBar from "./components/NavBar";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <NavBar/>
         <h1>
           Mi primera app en React.JS
         </h1>
-      </header>
     </div>
   );
 }
-
-export default App;
