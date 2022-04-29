@@ -3,7 +3,7 @@ export default function NavBar () {
         <header className="header">
             <div className="header-logo">
                 <img src="./assets/logoflex.png" alt="logo FlexIndumentaria" />
-                <p>Flex <p>Indumentaria</p></p>
+                <p>Flex <span>Indumentaria</span></p>
             </div>
             <ul className="header-menu">
                 <li><a href="#">Compra</a></li>
