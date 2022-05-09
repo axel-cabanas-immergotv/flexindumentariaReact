@@ -1,12 +1,17 @@
 @import "./header";
-.main {
-    padding: 50px 0 0 0;
 
-    h1 {
-        color: #b09e80;
-    }
-    ul li a {
-        @extend .header__menu-items;
-        text-decoration: none;
+.full__container {
+    background: url("https://htmldemo.net/mimosa/mimosa/img/slider/5.jpg") no-repeat scroll center center/cover;
+    padding: 70px 0;
+
+    .main {
+    
+        h1 {
+            color: #b09e80;
+        }
+        ul li a {
+            @extend .header__menu-items;
+            text-decoration: none;
+        }
     }
 }

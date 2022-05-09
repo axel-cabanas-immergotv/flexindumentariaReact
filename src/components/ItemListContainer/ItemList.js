@@ -1,0 +1,14 @@
+
+import Item from "./Item";
+
+export default function ItemList ({products}) {
+    return (
+        <section className="bg-light pt-5 pb-5">
+            <div className="list__container container">
+                {products.map(item => {
+                    return <Item product={item} />
+                })}
+            </div>
+        </section>
+    )
+}

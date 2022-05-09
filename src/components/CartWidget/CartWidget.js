@@ -1,3 +1,4 @@
+
 export default function CartIcon ({count}) {
     return (
         <div className="cart">

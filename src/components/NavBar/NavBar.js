@@ -1,5 +1,5 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import CartIcon from './CartWidget'
+import CartIcon from '../CartWidget/CartWidget';
 
 export default function Header ({category1, category2,category3,category4}) {
     return (

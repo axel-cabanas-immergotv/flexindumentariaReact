@@ -4,9 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul li {
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
     list-style: none;
+    }
+}
+a {
+    text-decoration: none
 }
 @import "./parciales/cart";
 @import "./parciales/header";
 @import "./parciales/main";
+@import "./parciales/items";

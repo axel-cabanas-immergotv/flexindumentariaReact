@@ -1,0 +1,64 @@
+.list__container {
+    background-color: #EFF1F3;
+    display: flex;
+    flex-wrap: wrap;
+
+    .banner {
+        background-color: #fff;
+        box-shadow: 0 8px 10px rgb(0 0 0 / 12%);
+        margin: 25px 0 0 0;
+
+        &__link {
+            text-decoration: none;
+            color: #000;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .banner__marca-info{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0 0 0;
+                align-items: flex-end;
+
+                .banner__rating{
+                    ul{
+                        li{
+                            display: inline-block;
+    
+                            a {
+                                color: #F5C60D;
+                                font-size: 12px;
+                            }
+                        } 
+                    } 
+                }
+                .banner__marca {
+                    color: #929292;
+                    letter-spacing: 0.025em;
+                    line-height: 18px;
+                    text-transform: capitalize;
+                    font-size: 12px;
+
+                    &:hover {
+                        color: #b09e80;
+                    }
+                } 
+            }
+            .banner__title {
+                font-weight: 600;
+                padding: 10px 0;
+                margin: 0;
+                text-align: center;
+            }
+            .banner__price {
+                @extend .banner__title;
+                font-size: 20px;
+                span {
+                    font-size: 20px;
+                    color:#b09e80;
+                }
+            }
+        }
+    }
+}
