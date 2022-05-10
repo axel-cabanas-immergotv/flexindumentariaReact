@@ -1,7 +1,7 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import CartIcon from '../CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
-export default function Header ({category1, category2,category3,category4}) {
+export default function NavBar ({category1, category2,category3,category4}) {
     return (
         <Navbar bg="light" expand="lg">
             <div className='container'>
@@ -16,7 +16,7 @@ export default function Header ({category1, category2,category3,category4}) {
                         <Nav.Link className='header__menu-items' href="#link">{category2}</Nav.Link>
                         <Nav.Link className='header__menu-items' href="#link">{category3}</Nav.Link>
                         <Nav.Link className='header__menu-items' href="#link">{category4}</Nav.Link>
-                        <Nav.Link className='header__menu-items' href="#link"><CartIcon count= {0} /></Nav.Link>
+                        <Nav.Link className='header__menu-items' href="#link"><CartWidget count= {0} /></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </div>
