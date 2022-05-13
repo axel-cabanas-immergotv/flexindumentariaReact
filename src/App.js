@@ -1,6 +1,7 @@
 import NavBar from "./components/NavBar/NavBar";
 import Main from "./components/Main/Main";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Pages from "./views/Pages/Pages";
 
 export default function App() {
   return (
