@@ -21,9 +21,9 @@ export default function ItemCount ({stock}){
                 )
                 : ( 
                     <>
-                        <button className="banner__link-btn px-2" onClick={handdleAdd}>+</button>
+                        <button className="banner__link-btn" onClick={handdleAdd}>+</button>
                         <p>{count}</p>
-                        <button className="banner__link-btn px-2" onClick={handdleRemove}>-</button>
+                        <button className="banner__link-btn" onClick={handdleRemove}>-</button>
                     </> 
                 )
             }

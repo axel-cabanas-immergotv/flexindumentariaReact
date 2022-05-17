@@ -17,7 +17,16 @@ a {
 p {
     margin-bottom: 0;
 }
+.p-70 {
+    padding: 70px 0;
+}
+.bg-light {
+    background-color: #EFF1F3 !important;
+}
+@import "./parciales/mediaQueries";
+@import "./parciales/line";
 @import "./parciales/cart";
 @import "./parciales/header";
 @import "./parciales/main";
 @import "./parciales/items";
+@import "./parciales/itemDetail";

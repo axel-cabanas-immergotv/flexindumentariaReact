@@ -21,26 +21,8 @@
                 padding: 10px 0 0 0;
                 align-items: flex-end;
 
-                .banner__rating{
-                    ul{
-                        li{
-                            display: inline-block;
-                            color: #F5C60D;
-                            font-size: 12px;
-                        } 
-                    } 
-                }
-                .banner__marca {
-                    color: #929292;
-                    letter-spacing: 0.025em;
-                    line-height: 18px;
-                    text-transform: capitalize;
-                    font-size: 12px;
-
-                    &:hover {
-                        color: #b09e80;
-                    }
-                } 
+                
+                
             }
             .banner__title {
                 display: flex;
@@ -52,27 +34,53 @@
                 color: #000;
             }
 
-            .banner__btn-container {
-                justify-content: center;
-                align-items: center;
-                font-size: 20px;
+            
 
-                .banner__link-btn {
-                    width: 100%;
-                    border: none;
-                    background: none;
-                }
-
-            }
-
-            .banner__price {
-                @extend .banner__title;
-                font-size: 20px;
-                span {
-                    font-size: 20px;
-                    color:#b09e80;
-                }
-            }
+            
         }
+    }
+}
+.banner__marca {
+    color: #929292;
+    letter-spacing: 0.025em;
+    line-height: 18px;
+    text-transform: capitalize;
+    font-size: 12px;
+
+    &:hover {
+        color: #b09e80;
+    }
+} 
+
+.banner__btn-container {
+    align-items: center;
+    font-size: 26px;
+    
+    p {
+        margin: 0 8px;
+    }
+}
+.banner__link-btn {
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,.25);
+    border-radius: 6px;
+    font-weight: 400;
+    width: 40px;
+}
+.banner__rating{
+    ul{
+        li{
+            display: inline-block;
+            color: #F5C60D;
+            font-size: 12px;
+        } 
+    } 
+}
+.banner__price {
+    @extend .banner__title;
+    font-size: 20px;
+    span {
+        font-size: 20px;
+        color:#b09e80;
     }
 }

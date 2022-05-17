@@ -1,7 +1,7 @@
 import React from "react"
 export default function Main ({texto, texto2, gretting}) {
     return (
-        <section className="full__container">
+        <section className="full__container p-70">
             <div className='container'>
                 <div className="main">
                     <h1>{texto}</h1>
