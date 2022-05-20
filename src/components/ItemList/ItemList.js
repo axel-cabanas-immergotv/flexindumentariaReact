@@ -6,7 +6,7 @@ export default function ItemList ({products}) {
         <section className="bg-light pt-5 pb-5">
             <div className="list__container container">
                 {products.map(item => {
-                    return <Item product={item} key={item.id} />
+                    return <Item  product={item} key={item.id} />
                 })}
             </div>
         </section>

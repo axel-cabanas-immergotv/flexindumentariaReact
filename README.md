@@ -1,3 +1,6 @@
+# Rutas
+Las rutas que configuré en mi proyecto son: Productos y Categorias. Que se encuentran en la ruta principal del proyecto que es Home, con click en el boton "Productos" ubicado en el Header te lleva a los productos, pueden filtrarlas por sus categorias(haciendo click en los botones "Camperas, Buzos, Vestidos, Remeras"), tambien pueden ver los detalles de esos productos haciendo click sobre ellos. Por ultimo tambien se puede volver al inicio de la pagina haciendo click sobre el logo de la pagina que esta ubicado en el Header.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

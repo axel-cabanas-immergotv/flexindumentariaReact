@@ -79,8 +79,4 @@
 .banner__price {
     @extend .banner__title;
     font-size: 20px;
-    span {
-        font-size: 20px;
-        color:#b09e80;
-    }
 }

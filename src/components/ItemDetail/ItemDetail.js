@@ -6,7 +6,7 @@ export default function ItemDetail ({product}) {
         <section className="bg-light p-70">
             <div className="container d-flex item__detail">
                 <div className="col-md-8 item__detail-img">
-                    <img className="img-fluid" src={product.img} />
+                    <img className="img-fluid" src={`../../${product.img}`} />
                 </div>
                 <div className="col-md-4 p-3 line">
                     <div className="item__detail-info">
@@ -16,7 +16,7 @@ export default function ItemDetail ({product}) {
                             <RatingStar/>
                         </div>
                         <ItemCount className="item__detail-count" stock={product.stock}/>
-                        <p className="item__detail-info-price mt-3"><span>$</span>{product.precio}</p>
+                        <p className="item__detail-info-price mt-3">${product.precio}</p>
                     </div>
                     
                     <div className="item__detail-talles mt-4">

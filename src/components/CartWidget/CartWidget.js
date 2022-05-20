@@ -1,8 +1,8 @@
 
-export default function CartWidget ({count}) {
+export default function CartWidget ({count, img}) {
     return (
         <div className="cart">
-            <img src='./assets/cart.png' alt='carrito de compras' />
+            <img src={img} alt='carrito de compras' />
             <p>({count})</p>
         </div>
     )
