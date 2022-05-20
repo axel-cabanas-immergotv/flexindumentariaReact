@@ -8,7 +8,7 @@ export default function App() {
     <div className="App">
       <NavBar category1= {'Compra'} category2= {'Ayuda'} category3= {'Acerca de'} category4= {'Contacto'} />
       <Main texto={'Flex'} texto2={'Explora tendencias'} gretting={'¡Bienvenido!'}/>
-      <ItemDetailContainer/>
+      <ItemDetailContainer productId={1}/>
     </div>
   );
 }
