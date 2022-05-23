@@ -1,18 +1,25 @@
-import React from "react"
-export default function ItemCount ({stock}){
-    const [count, setCount] = React.useState(0);
-    const handdleAdd = () => {
+import React from "react";
+
+export default function ItemCount ({stock, onAdd}){
+    const [count, setCount] = React.useState(1);
+    const onIncrease = () => {
         if(count < stock) {
             setCount(count + 1);
         };
     }
-    const handdleRemove = () => {
-        if(count > 0) {
+
+    const onDecrease = () => {
+        if(count > 1) {
             setCount(count - 1);
         }
     }
-    
+
+    const onSave = () => {
+        onAdd(count);
+    }
+        
     return (
+        
         <div className="banner__btn-container d-flex">
             {
                 stock === 0
@@ -21,9 +28,12 @@ export default function ItemCount ({stock}){
                 )
                 : ( 
                     <>
-                        <button className="banner__link-btn" onClick={handdleAdd}>+</button>
-                        <p>{count}</p>
-                        <button className="banner__link-btn" onClick={handdleRemove}>-</button>
+                        <div className="d-flex">    
+                            <button className="banner__link-btn" onClick={onIncrease}>+</button>
+                            <p>{count}</p>
+                            <button className="banner__link-btn" onClick={onDecrease}>-</button>
+                        </div>
+                        <button className="item__detail-btn-cart mt-2" onClick={onSave}>Agregar al carrito</button>
                     </> 
                 )
             }

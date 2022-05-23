@@ -1,7 +1,14 @@
+import React from "react";
 import RatingStar from "../RatingStar/RatingStar";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 export default function ItemDetail ({product}) {
+    const [quantity, setQuantity] = React.useState(0);
+    const onAdd = (quantityToAdd) => {
+        setQuantity(quantityToAdd);
+    }
+    
     return (
         <section className="bg-light p-70">
             <div className="container d-flex item__detail">
@@ -15,7 +22,7 @@ export default function ItemDetail ({product}) {
                             <p className="">{product.marca}</p>
                             <RatingStar/>
                         </div>
-                        <ItemCount className="item__detail-count" stock={product.stock}/>
+                       
                         <p className="item__detail-info-price mt-3">${product.precio}</p>
                     </div>
                     
@@ -27,8 +34,19 @@ export default function ItemDetail ({product}) {
                         <button className="item__detail-talles-btn">XL</button>
                     </div>
                     <div className="item__detail-btn d-flex flex-column mt-4">
-                        <button className="item__detail-btn-buy mb-2">Comprar ahora</button>
-                        <button className="item__detail-btn-cart">Agregar al carrito</button>
+                        {
+                            quantity > 0
+                            ? (
+                                <Link to='/cart' className="item__detail-btn-link">
+                                    <button className="item__detail-btn-link-buy">
+                                        Comprar ahora
+                                    </button>
+                                </Link>
+                            )
+                            : (
+                                <ItemCount  className="item__detail-count" stock={product.stock} onAdd={onAdd}/>
+                            )
+                        }
                     </div>
                 </div>
             </div>

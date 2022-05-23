@@ -53,8 +53,8 @@
 } 
 
 .banner__btn-container {
-    align-items: center;
     font-size: 26px;
+    flex-direction: column;
     
     p {
         margin: 0 8px;
