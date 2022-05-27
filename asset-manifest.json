@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/flexindumentariaReact/static/css/main.fa418207.css",
-    "main.js": "/flexindumentariaReact/static/js/main.e0b24a21.js",
+    "main.js": "/flexindumentariaReact/static/js/main.76c5b8ba.js",
     "static/js/787.223550ad.chunk.js": "/flexindumentariaReact/static/js/787.223550ad.chunk.js",
     "index.html": "/flexindumentariaReact/index.html",
     "main.fa418207.css.map": "/flexindumentariaReact/static/css/main.fa418207.css.map",
-    "main.e0b24a21.js.map": "/flexindumentariaReact/static/js/main.e0b24a21.js.map",
+    "main.76c5b8ba.js.map": "/flexindumentariaReact/static/js/main.76c5b8ba.js.map",
     "787.223550ad.chunk.js.map": "/flexindumentariaReact/static/js/787.223550ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa418207.css",
-    "static/js/main.e0b24a21.js"
+    "static/js/main.76c5b8ba.js"
   ]
 }
