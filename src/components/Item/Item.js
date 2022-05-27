@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Item ({product}) {
     const navigate = useNavigate();
     return (
-        <div className="col-lg-3 col-sm-4 px-2" onClick={() => {navigate(`/product/${product.id}`)}}>
+        <div className="col-lg-3 col-sm-4 px-2" onClick={() => {navigate(`/flexindumentariaReact/product/${product.id}`)}}>
             <div className="banner mb-3">
                 <div className="banner__link" >
                         <img  src={`../../${product.img}`} alt="banner" />

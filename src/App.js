@@ -13,10 +13,10 @@ export default function App() {
         <CartProvider>
             <Routes>
               <Route exact path="*" element={<Home />} />
-              <Route exact path="/products" element={<Products />} />
-              <Route exact path="/product/:productId" element={<Product />} />
-              <Route exact path="/category/:categoryId" element={<Category />} />
-              <Route exact path="/cart" element={<Cart/>} />
+              <Route exact path="/flexindumentariaReact/products" element={<Products />} />
+              <Route exact path="/flexindumentariaReact/product/:productId" element={<Product />} />
+              <Route exact path="/flexindumentariaReact/category/:categoryId" element={<Category />} />
+              <Route exact path="/flexindumentariaReact/cart" element={<Cart/>} />
             </Routes>
         </CartProvider>
       </BrowserRouter>
