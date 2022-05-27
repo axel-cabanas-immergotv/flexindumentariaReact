@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/flexindumentariaReact/static/css/main.fa418207.css",
+    "main.js": "/flexindumentariaReact/static/js/main.e0b24a21.js",
+    "static/js/787.223550ad.chunk.js": "/flexindumentariaReact/static/js/787.223550ad.chunk.js",
+    "index.html": "/flexindumentariaReact/index.html",
+    "main.fa418207.css.map": "/flexindumentariaReact/static/css/main.fa418207.css.map",
+    "main.e0b24a21.js.map": "/flexindumentariaReact/static/js/main.e0b24a21.js.map",
+    "787.223550ad.chunk.js.map": "/flexindumentariaReact/static/js/787.223550ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa418207.css",
+    "static/js/main.e0b24a21.js"
+  ]
+}
