@@ -1,9 +1,13 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from '../../context/CartContext/CartContext';
 
-export default function CartWidget ({count, img}) {
+export default function CartWidget ({img}) {
+    const { cart } = React.useContext(CartContext);
     return (
-        <div className="cart">
-            <img src={img} alt='carrito de compras' />
-            <p>({count})</p>
-        </div>
+            <div className="cart">
+                <img src={img} alt='carrito de compras' />
+                <p>({cart.length})</p>
+            </div>
     )
 }

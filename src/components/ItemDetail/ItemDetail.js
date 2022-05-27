@@ -1,14 +1,13 @@
 import React from "react";
+import { CartContext } from '../../context/CartContext/CartContext';
 import RatingStar from "../RatingStar/RatingStar";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 export default function ItemDetail ({product}) {
-    const [quantity, setQuantity] = React.useState(0);
-    const onAdd = (quantityToAdd) => {
-        setQuantity(quantityToAdd);
-    }
-    
+    const {addItem, isInCart, removeItem} = React.useContext(CartContext);
+    const [count, setCount] = React.useState(1);
+
     return (
         <section className="bg-light p-70">
             <div className="container d-flex item__detail">
@@ -35,16 +34,25 @@ export default function ItemDetail ({product}) {
                     </div>
                     <div className="item__detail-btn d-flex flex-column mt-4">
                         {
-                            quantity > 0
+                            isInCart(product.id)
                             ? (
+                                <>
                                 <Link to='/cart' className="item__detail-btn-link">
                                     <button className="item__detail-btn-link-buy">
                                         Comprar ahora
                                     </button>
                                 </Link>
+                                <button onClick={() => removeItem(product.id)} className="item__detail-btn-link-buy mt-2">Eliminar del carrito</button>
+                                </>
                             )
                             : (
-                                <ItemCount  className="item__detail-count" stock={product.stock} onAdd={onAdd}/>
+                                <ItemCount
+                                   onSubmit={() => addItem(product, count)}
+                                   count={count}
+                                   setCount={setCount}
+                                   stock={product.stock}
+                                   className="item__detail-count"
+                                 />
                             )
                         }
                     </div>

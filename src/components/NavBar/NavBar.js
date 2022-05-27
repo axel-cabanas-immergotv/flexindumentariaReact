@@ -19,7 +19,7 @@ export default function NavBar ({category1, category2,category3,category4, img, 
                         <Nav.Link className='header__menu-items'>{category2}</Nav.Link>
                         <Nav.Link className='header__menu-items'>{category3}</Nav.Link>
                         <Nav.Link className='header__menu-items'>{category4}</Nav.Link>
-                        <Nav.Link className='header__menu-items'><CartWidget count= {0} img={imgCart} /></Nav.Link>
+                        <Nav.Link className='header__menu-items' href='/cart'><CartWidget count= {0} img={imgCart} /></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </div>

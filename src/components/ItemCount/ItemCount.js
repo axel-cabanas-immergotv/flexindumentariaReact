@@ -1,7 +1,9 @@
 import React from "react";
+import { CartContext } from "../../context/CartContext/CartContext";
 
-export default function ItemCount ({stock, onAdd}){
-    const [count, setCount] = React.useState(1);
+export default function ItemCount ({count, setCount, onSubmit ,stock}){
+    
+
     const onIncrease = () => {
         if(count < stock) {
             setCount(count + 1);
@@ -12,10 +14,6 @@ export default function ItemCount ({stock, onAdd}){
         if(count > 1) {
             setCount(count - 1);
         }
-    }
-
-    const onSave = () => {
-        onAdd(count);
     }
         
     return (
@@ -33,7 +31,7 @@ export default function ItemCount ({stock, onAdd}){
                             <p>{count}</p>
                             <button className="banner__link-btn" onClick={onDecrease}>-</button>
                         </div>
-                        <button className="item__detail-btn-cart mt-2" onClick={onSave}>Agregar al carrito</button>
+                        <button className="item__detail-btn-cart mt-2" onClick={onSubmit}>Agregar al carrito</button>
                     </> 
                 )
             }
