@@ -1,0 +1,45 @@
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+            img {
+                width: 120px;
+                height: auto;
+            }
+            p {
+                display: flex;
+                margin: 0 12px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #b09e80;
+    
+                span {
+                    color: #000;
+                    margin-left: 0;
+                }
+            }
+        
+    }
+
+    .header__menu {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &-items {
+            color: #b09e80 !important;
+            font-size: 18px;
+            font-weight: 600;
+
+            &:hover {
+                color:#000 !important;
+            }
+        }
+    }
+    .navbar-collapse {
+        flex-grow: 0 !important;
+    }
+    

@@ -1,0 +1,14 @@
+.full__container {
+    background: url("https://htmldemo.net/mimosa/mimosa/img/slider/5.jpg") no-repeat scroll center center/cover;
+
+    .main {
+        padding: 70px 0 126px;
+        h1 {
+            color: #b09e80;
+        }
+        ul li a {
+            @extend .header__menu-items;
+            text-decoration: none;
+        }
+    }
+}
