@@ -2,3 +2,58 @@
     display: flex;
     align-items: flex-start;
 }
+.cart__container-empty {
+    button {
+        width: 180px;
+    }
+}
+
+.cart__container {
+
+    &-header {
+        
+        &-saved {
+            width: auto;
+            padding: 0 54px 15px;
+            color: #3483fa;
+        }
+        &-cart {
+            border-bottom: 2px solid #333;
+            @extend .cart__container-header-saved;
+            color: #000;
+        }
+    }
+    &-info {
+        align-items: center;
+        padding: 44px 0 48px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    &-img {
+        margin: 0 10px 0 0;
+
+        img {
+            border: 1px solid black;
+        }
+    }
+    &-item {
+        align-items: center;
+
+        &-count {
+            margin: 0 20px;
+        }
+        &-price {
+            font-weight: 600;
+        }
+    }
+    &-btn {
+        text-align: center;
+        padding: 44px 0 48px;
+        border-bottom: 1px solid #e6e6e6;
+
+        button {
+            width: 180px;
+            margin: 0 5px;
+        }
+    }
+
+}

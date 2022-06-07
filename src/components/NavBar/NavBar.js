@@ -13,13 +13,13 @@ export default function NavBar ({category1, category2,category3,category4, img, 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className=' header__menu'>
                     <Nav>
-                        <Nav.Link className='header__menu-items' href='/products'>
+                        <Link className='header__menu-items nav-link' to='/products'>
                             {category1}
-                        </Nav.Link>
+                        </Link>
                         <Nav.Link className='header__menu-items'>{category2}</Nav.Link>
                         <Nav.Link className='header__menu-items'>{category3}</Nav.Link>
                         <Nav.Link className='header__menu-items'>{category4}</Nav.Link>
-                        <Nav.Link className='header__menu-items' href='/cart'><CartWidget count= {0} img={imgCart} /></Nav.Link>
+                        <Link className='header__menu-items nav-link' to='/cart'><CartWidget img={imgCart} /></Link>
                     </Nav>
                 </Navbar.Collapse>
             </div>

@@ -3,3 +3,26 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .cart__container-info, .cart__container-item {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .cart__container-header {
+        ul li {
+            padding: 0 24px 15px;
+        }
+    }
+    .cart__container-item {
+        a {
+            text-align: center;
+            padding: 10px 0;
+        }
+        &-price {
+            padding: 10px 0;
+        }
+    }
+}

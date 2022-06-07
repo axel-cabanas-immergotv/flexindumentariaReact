@@ -46,13 +46,15 @@ export default function ItemDetail ({product}) {
                                 </>
                             )
                             : (
+                                <>
                                 <ItemCount
-                                   onSubmit={() => addItem(product, count)}
                                    count={count}
                                    setCount={setCount}
                                    stock={product.stock}
                                    className="item__detail-count"
                                  />
+                                 <button className="item__detail-btn-cart mt-2" onClick={() => addItem(product, count)}>Agregar al carrito</button>
+                                 </>
                             )
                         }
                     </div>

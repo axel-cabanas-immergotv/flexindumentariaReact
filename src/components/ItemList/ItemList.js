@@ -1,4 +1,3 @@
-
 import Item from "../Item/Item";
 
 export default function ItemList ({products}) {

@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #EFF1F3
+}
 ul {
     margin-bottom: 0;
     padding-left: 0;
@@ -26,6 +29,7 @@ p {
 }
 @import "./parciales/mediaQueries";
 @import "./parciales/line";
+@import "./parciales/iconLoading";
 @import "./parciales/cart";
 @import "./parciales/header";
 @import "./parciales/main";

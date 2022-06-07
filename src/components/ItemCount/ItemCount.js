@@ -1,7 +1,7 @@
 import React from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 
-export default function ItemCount ({count, setCount, onSubmit ,stock}){
+export default function ItemCount ({count, setCount, stock}){
     
 
     const onIncrease = () => {
@@ -31,7 +31,7 @@ export default function ItemCount ({count, setCount, onSubmit ,stock}){
                             <p>{count}</p>
                             <button className="banner__link-btn" onClick={onDecrease}>-</button>
                         </div>
-                        <button className="item__detail-btn-cart mt-2" onClick={onSubmit}>Agregar al carrito</button>
+                        
                     </> 
                 )
             }
