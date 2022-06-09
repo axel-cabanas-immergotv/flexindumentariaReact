@@ -7,7 +7,7 @@ export default function Product (){
     return(
         <div>
             <NavBar imgCart={'../../assets/cart.png'} category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'../../assets/logoflex.png'} />
-            <ItemDetailContainer productId={+productId}/> 
+            <ItemDetailContainer productId={productId}/> 
         </div>
     ) 
 }

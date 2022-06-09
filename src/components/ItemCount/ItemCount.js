@@ -22,7 +22,7 @@ export default function ItemCount ({count, setCount, stock}){
             {
                 stock === 0
                 ? (
-                    <p>Sin stock</p> 
+                    <p>Sin stock</p>
                 )
                 : ( 
                     <>

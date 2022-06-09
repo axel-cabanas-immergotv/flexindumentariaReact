@@ -9,11 +9,11 @@ export default function Item ({product}) {
                 <div className="banner__link" >
                         <img  src={`../../${product.img}`} alt="banner" />
                     <div className="banner__marca-info">
-                        <p className="banner__marca" >{product.marca}</p>
+                        <p className="banner__marca" >{product.brand}</p>
                         <RatingStar/>
                     </div>
-                    <a href="#" className="banner__title" >{product.nombre}</a>
-                    <p className="banner__price"><span>$</span>{product.precio}</p>
+                    <a href="#" className="banner__title" >{product.title}</a>
+                    <p className="banner__price"><span>$</span>{product.price}</p>
                 </div>
             </div>
         </div>

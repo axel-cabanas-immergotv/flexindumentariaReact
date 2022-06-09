@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 export default function ItemDetail ({product}) {
     const {addItem, isInCart, removeItem} = React.useContext(CartContext);
     const [count, setCount] = React.useState(1);
+    const Button = () => {
+        if(product.stock === 0) {
+            return <Link to='/products'><button className="item__detail-btn-cart mt-2">Ir a la tienda</button></Link>
+        } else {
+            return <button className="item__detail-btn-cart mt-2" onClick={() => addItem(product, count)}>Agregar al carrito</button>
+        }
+    }
 
     return (
         <section className="bg-light p-70">
@@ -16,13 +23,13 @@ export default function ItemDetail ({product}) {
                 </div>
                 <div className="col-md-4 p-3 line">
                     <div className="item__detail-info">
-                        <p href="#" className="mb-3 item__detail-info-name">{product.nombre}</p>
+                        <p href="#" className="mb-3 item__detail-info-name">{product.title}</p>
                         <div className="item__detail-marca mb-3">
-                            <p className="">{product.marca}</p>
+                            <p className="">{product.brand}</p>
                             <RatingStar/>
                         </div>
                        
-                        <p className="item__detail-info-price mt-3">${product.precio}</p>
+                        <p className="item__detail-info-price mt-3">${product.price}</p>
                     </div>
                     
                     <div className="item__detail-talles mt-4">
@@ -42,7 +49,7 @@ export default function ItemDetail ({product}) {
                                         Comprar ahora
                                     </button>
                                 </Link>
-                                <button onClick={() => removeItem(product.id)} className="item__detail-btn-link-buy mt-2">Eliminar del carrito</button>
+                                <Link to='/products'><button className="item__detail-btn-link-buy mt-2">Seguir comprando</button></Link>
                                 </>
                             )
                             : (
@@ -53,7 +60,7 @@ export default function ItemDetail ({product}) {
                                    stock={product.stock}
                                    className="item__detail-count"
                                  />
-                                 <button className="item__detail-btn-cart mt-2" onClick={() => addItem(product, count)}>Agregar al carrito</button>
+                                 <Button/>
                                  </>
                             )
                         }

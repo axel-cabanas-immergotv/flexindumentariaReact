@@ -52,10 +52,6 @@ const CartProvider = ({children}) => {
         )
     }
 
-    const total = (item, secondItem) => {
-        return item.precio * secondItem;
-    }
-
     return (
         <Provider value={{
             cart,
@@ -63,8 +59,7 @@ const CartProvider = ({children}) => {
             isInCart,
             removeItem,
             clear,
-            IconLoading,
-            total
+            IconLoading
         }}>
             {children}
         </Provider>

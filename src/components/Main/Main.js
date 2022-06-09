@@ -10,10 +10,10 @@ export default function Main ({texto, texto2, categories}) {
                     <h2>{texto2}</h2>
                     <h3>{categories}</h3>
                     <ul>
-                        <li><Link to='/category/1'>Camperas</Link></li>
-                        <li><Link to='/category/2'>Buzos</Link></li>
-                        <li><Link to='/category/3'>Vestidos</Link></li>
-                        <li><Link to='/category/4'>Remeras</Link></li>
+                        <li><Link to='/category/camperas'>Camperas</Link></li>
+                        <li><Link to='/category/buzos'>Buzos</Link></li>
+                        <li><Link to='/category/vestidos'>Vestidos</Link></li>
+                        <li><Link to='/category/remeras'>Remeras</Link></li>
                     </ul>
                 </div>
             </div>
