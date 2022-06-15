@@ -4,7 +4,7 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 export default function Home () {
   return (
     <div className="App"> 
-      <NavBar imgCart='./assets/cart.png' category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'./assets/logoflex.png'} />
+      <NavBar category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />      
       <Main texto={'Flex'} texto2={'Explora tendencias'} categories={'¡Categorias!'}/>
     </div>
   )

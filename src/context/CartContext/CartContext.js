@@ -6,6 +6,7 @@ const {Provider} = CartContext;
 const CartProvider = ({children}) => {
     
     const [cart, setCart] = React.useState([])
+    const [data, setData] = React.useState()
     console.log(cart)
 
     const addItem = (item, count) => {
@@ -52,14 +53,19 @@ const CartProvider = ({children}) => {
         )
     }
 
+    
+
     return (
         <Provider value={{
             cart,
+            setCart,
             addItem,
             isInCart,
             removeItem,
             clear,
-            IconLoading
+            IconLoading,
+            data,
+            setData
         }}>
             {children}
         </Provider>

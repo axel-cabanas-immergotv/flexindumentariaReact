@@ -29,7 +29,7 @@ export default function CartContainer () {
                     :
                     (
                         <>
-                        <NavBar imgCart={'../../assets/cart.png'} category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'../../assets/logoflex.png'} />
+                        <NavBar category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />
                         <div className="cart__container-header col-md-12">
                             <ul className="d-flex">
                                 <li className="cart__container-header-cart">Carrito ({cart.length})</li>
@@ -38,7 +38,7 @@ export default function CartContainer () {
                         </div>
                         {cartMap}
                         <div className="cart__container-btn">
-                            <button className="item__detail-btn-cart">Continuar compra</button>
+                            <Link to='/checkout'><button className="item__detail-btn-cart">Continuar compra</button></Link>
                             <button onClick={() => clear()} className="item__detail-btn-link-buy mt-2">Eliminar todo</button>
                         </div>
                         </>

@@ -5,7 +5,7 @@ export default function Category() {
   const { categoryId } = useParams();
   return (
       <div>
-        <NavBar imgCart={'../../assets/cart.png'} category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'../../assets/logoflex.png'} />
+        <NavBar category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />
         <ItemListContainer categoryId={categoryId} />
       </div>
   );

@@ -30,7 +30,7 @@ export default function ItemListContainer ({categoryId}) {
 
     setTimeout(() => {
         setIsLoading(false);
-    }, 1500);
+    }, 1000);
 
     return isLoading ? <IconLoading/> : <ItemList products={productos} />;
 }

@@ -12,10 +12,10 @@ export default function Cart ({product}) {
             <div>
                 <div className="cart__container-info d-flex justify-content-center">
                     <div className="cart__container-img">
-                        <img width='90px' height='auto' src={`../../${product.img}`} />
+                        <img width='90px' height='auto' src={product.img} />
                     </div>
                     <div className="cart__container-item col-md-8 d-flex justify-content-around">
-                        <a href="/">{product.nombre}</a>
+                        <a href="/">{product.title}</a>
                         <div className="cart__container-item-count">
                             <ItemCount
                                 count={count}

@@ -21,7 +21,7 @@ export default function ItemDetailContainer ({productId}) {
     
     setTimeout(() => {
         setIsLoading(false);
-    }, 1500);
+    }, 1000);
 
     return isLoading ? <IconLoading/> : <ItemDetail product={producto} />
 }

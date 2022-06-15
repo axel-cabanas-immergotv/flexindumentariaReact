@@ -6,7 +6,7 @@ export default function Product (){
     const {productId} = useParams();
     return(
         <div>
-            <NavBar imgCart={'../../assets/cart.png'} category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'../../assets/logoflex.png'} />
+            <NavBar category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />
             <ItemDetailContainer productId={productId}/> 
         </div>
     ) 
