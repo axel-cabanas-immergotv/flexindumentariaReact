@@ -88,7 +88,7 @@ export default function CheckoutContainer () {
                                         <label for='name' className="input-label" >Direccion</label>
                                     </div>
                                     <div className="input-container">
-                                        <input onChange={handdleChange} type='text' name='dpto' required className="input" />
+                                        <input onChange={handdleChange} type='number' name='dpto' required className="input" />
                                         <label for='name' className="input-label">Piso/Dpto</label>
                                     </div>
                                 </div>
@@ -107,15 +107,14 @@ export default function CheckoutContainer () {
                                             <label for='name' className="input-label">Postal</label>
                                         </div>
                                     </div>
-                                    
                                 </div>
                                 <div className="d-flex mt-3">
                                     <div className="input-container p-right">
-                                        <input onChange={handdleChange} type='text' name='dni' required className="input" />
+                                        <input onChange={handdleChange} type='number' name='dni' required className="input" />
                                         <label for='name' className="input-label" >DNI</label>
                                     </div>
                                     <div className="input-container">
-                                        <input type='text' name='number' required className="input" />
+                                        <input type='number' name='number' required className="input" />
                                         <label for='name' className="input-label">Movil</label>
                                     </div>
                                 </div>
@@ -125,7 +124,6 @@ export default function CheckoutContainer () {
                                         <label for='name' className="input-label">Email</label>
                                     </div>
                                 </div>
-                                
                                 <button  className="item__detail-btn-link-buy mt-2"> Finalizar compra</button>
                                 <p className="purchase-successful">{text}</p>
                             </form>
