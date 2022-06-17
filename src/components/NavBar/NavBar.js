@@ -2,7 +2,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 
-export default function NavBar ({category1, category2,category3,category4, imgCart, display}) {
+export default function NavBar ({category1, category2,category3,category4, display}) {
     return (
         <Navbar bg="light" expand="lg">
             <div className='container'>

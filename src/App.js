@@ -5,7 +5,7 @@ import Products from "./views/Products/Products";
 import Product from "./views/Product/Product";
 import Category from "./views/Category/Category";
 import CartContainer from "./components/CartContainer/CartContainer";
-import Checkout from "./views/Checkout/Checkout";
+import CheckoutContainer from "./components/CheckoutContainer/CheckoutContainer";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
               <Route exact path="/product/:productId" element={<Product />} />
               <Route exact path="/category/:categoryId" element={<Category />} />
               <Route exact path="/cart" element={<CartContainer/>} />
-              <Route exact path="/checkout" element={<Checkout/>} />
+              <Route exact path="/checkout" element={<CheckoutContainer/>} />
             </Routes>
         </CartProvider>
       </BrowserRouter>

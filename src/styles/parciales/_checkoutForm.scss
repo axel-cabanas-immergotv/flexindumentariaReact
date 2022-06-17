@@ -13,8 +13,7 @@
 
 .input-container {
     position: relative;
-
-    
+    width: 100%;
 
     .input {
         padding: 10px;
@@ -49,6 +48,12 @@
         outline-color: #b09e80;
     }
 }
+.checkout__items {
+    &-card {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+    }
+}
 
 .purchase-successful {
     color: rgb(13, 190, 63);
@@ -56,4 +61,13 @@
 
 .p-right {
     padding-right: 15px;
+}
+.p-left {
+    padding-left: 15px;
+}
+.width-50 {
+    width: 50%;
+}
+.p-md {
+    padding: 0 15px;
 }

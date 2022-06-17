@@ -53,7 +53,7 @@ const CartProvider = ({children}) => {
         )
     }
 
-    
+    const total = cart.map(item => item.price * item.quantity).reduce((a, b) => a + b, 0);
 
     return (
         <Provider value={{
@@ -65,7 +65,8 @@ const CartProvider = ({children}) => {
             clear,
             IconLoading,
             data,
-            setData
+            setData,
+            total
         }}>
             {children}
         </Provider>

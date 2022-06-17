@@ -15,7 +15,7 @@ export default function CartContainer () {
                     cart.length === 0 ? 
                     (
                         <>
-                        <NavBar imgCart={'../../assets/cart.png'} display='none' category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' img={'../../assets/logoflex.png'} />
+                        <NavBar display='none' category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />
                         <div className="cart__container-empty">
                             <h1>No hay nada en el carrito</h1>
                             <Link to='/products'>
