@@ -6,8 +6,12 @@ export default function Main ({texto, texto2, categories}) {
         <section className="full__container">
             <div className='container'>
                 <div className="main">
-                    <h1>{texto}</h1>
-                    <h2>{texto2}</h2>
+                    <div style={{display: 'inline-block'}}>
+                        <h1 className="main__title" style={{'--duration': '1s'}}>
+                            <span style={{'--delay': '.5s'}}>{texto}</span>
+                            <span style={{'--delay': '.8s'}}>{texto2}</span>
+                        </h1>
+                    </div>
                     <h3>{categories}</h3>
                     <ul>
                         <li><Link to='/category/camperas'>Camperas</Link></li>

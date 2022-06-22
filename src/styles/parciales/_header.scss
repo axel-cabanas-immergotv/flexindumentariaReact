@@ -1,12 +1,13 @@
 
-    .header-logo {
+    .header__logo {
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        height: 100px;
 
             img {
-                width: 120px;
+                width: 100px;
                 height: auto;
             }
             p {
