@@ -7,7 +7,7 @@ import Checkout from "../../views/Checkout/Checkout";
 
 export default function CheckoutContainer () {
     const { cart, setCart, data, setData, total } = React.useContext(CartContext);
-    const [text, setText] = React.useState("")
+    const [text, setText] = React.useState("");
 
     const handdleChange = (event) => {
         const { name, value } = event.target;
@@ -23,7 +23,7 @@ export default function CheckoutContainer () {
           total: total,
         };
 
-        const updateProducts = async () => {
+        const updateProducts = async (id) => {
             const db = getFirestore ()
             cart.map( async (item) => {
               const productRef = doc(db, 'productos', item.id)
@@ -34,18 +34,18 @@ export default function CheckoutContainer () {
               }
               const newStock = transfDoc.data().stock - item.quantity;
               transaction.update(productRef, { stock: newStock });
-              setText("¡Compra exitosa!")
+              setText(`¡Compra realizada!, tu orden es ${id}`);
               setTimeout(() => {
                 setCart([]);
-              }, 2500);
+              }, 3000);
             });
             })
         }
 
         const db = getFirestore()
         const ordersCollection = collection(db, "orders")
-        await addDoc(ordersCollection, order).then(() => {
-        updateProducts()
+        await addDoc(ordersCollection, order).then(({id}) => {
+        updateProducts(id)
         })
   }
 
@@ -124,8 +124,8 @@ export default function CheckoutContainer () {
                                         <label for='name' className="input-label">Email</label>
                                     </div>
                                 </div>
-                                <button  className="item__detail-btn-link-buy mt-2"> Finalizar compra</button>
-                                <p className="purchase-successful">{text}</p>
+                                <button  className="item__detail-btn-link-buy mt-3"> Finalizar compra</button>
+                                <p className="purchase-successful mt-3">{text}</p>
                             </form>
                         </div>
                         <div className="col-md-5 col-12 p-left checkout__items">
