@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext/CartContext";
 import NavBar from "../NavBar/NavBar";
 import Cart from "../../views/Cart/Cart";
+import Footer from "../Footer/Footer";
 
 export default function CartContainer () {
     const { cart, clear } = React.useContext(CartContext);
@@ -10,7 +11,7 @@ export default function CartContainer () {
 
     return (
         <section>
-            <div className="container">
+            <div className="container-lg pb-5">
                 {
                     cart.length === 0 ? 
                     (
@@ -45,6 +46,7 @@ export default function CartContainer () {
                     )
                 }
             </div>
+            <Footer/>
         </section>
     )
 }

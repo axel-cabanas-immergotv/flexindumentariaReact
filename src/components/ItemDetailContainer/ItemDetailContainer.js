@@ -23,5 +23,5 @@ export default function ItemDetailContainer ({productId}) {
         setIsLoading(false);
     }, 1000);
 
-    return isLoading ? <IconLoading/> : <ItemDetail product={producto} />
+    return isLoading ? <IconLoading/> : <ItemDetail product={producto} id={producto.id} />
 }

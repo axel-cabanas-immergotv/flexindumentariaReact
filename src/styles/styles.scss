@@ -28,11 +28,13 @@ p {
     background-color: #EFF1F3 !important;
 }
 @import "./parciales/mediaQueries";
+@import "./parciales/items";
+@import "./parciales/itemDetail";
 @import "./parciales/line";
 @import "./parciales/iconLoading";
+@import "./parciales/socialNetworks";
 @import "./parciales/checkoutForm";
 @import "./parciales/cart";
 @import "./parciales/header";
 @import "./parciales/main";
-@import "./parciales/items";
-@import "./parciales/itemDetail";
+@import "./parciales/footer";

@@ -3,7 +3,8 @@
 
     .main {
         padding: 70px 0 126px;
-        &__title span {
+        &__animation {
+            &-text {
             --total:calc(var(--duration)
             + var(--delay));
             position: relative;
@@ -40,10 +41,17 @@
             &:nth-child(2)::after {
                 border-top: 3px solid #95866c;
             }
-        }
+            }
+        } 
         ul li a {
-            @extend .header__menu-items;
+            font-size: 18px;
+            font-weight: 600;
             text-decoration: none;
+            color: transparent;
+
+            &:hover {
+                color:#000 !important;
+            }
         }
     }
 }
