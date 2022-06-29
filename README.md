@@ -1,73 +1,35 @@
 # Rutas
 Las rutas que configuré en mi proyecto son: Productos y Categorias. Que se encuentran en la ruta principal del proyecto que es Home, con click en el boton "Productos" ubicado en el Header te lleva a los productos, pueden filtrarlas por sus categorias(haciendo click en los botones "Camperas, Buzos, Vestidos, Remeras"), tambien pueden ver los detalles de esos productos haciendo click sobre ellos. Por ultimo tambien se puede volver al inicio de la pagina haciendo click sobre el logo de la pagina que esta ubicado en el Header.
 
-# Getting Started with Create React App
+## Demo de la navegabilidad en la web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://user-images.githubusercontent.com/82482457/176558263-dd973b67-af0b-4673-80cc-59ff4d3aced3.mp4
 
-## Available Scripts
+## Demo de la orden en Firebase
 
-In the project directory, you can run:
+![flexin__firebase-demo](https://user-images.githubusercontent.com/82482457/176560075-70416900-55db-4c8a-940b-dbdeacc346fd.png)
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para inicializar el proyecto, en el directorio del proyecto debe instalar [ npm ](https://www.npmjs.com/):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  npm install
+```
+## Correr proyecto
 
-### `npm test`
+Para correr el proyecto, debe utilizar:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm start
+```
 
-### `npm run build`
+## Librerias utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para este proyecto se utilizaron las siguientas librerias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[ SASS ](https://sass-lang.com/): pre-procesador de CSS utilizado para los estilos. Los estilos se encuentran en la carpeta styles/styles.scss
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[ Bootstrap ](https://react-bootstrap.github.io/): libreria con uso para adaptar componentes a diferentes dispositivos(utilizado en las carpetas: components y views)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[ FontAwesome ](https://fontawesome.com/): libreria para el uso de iconos en svg(utilizado en las carpetas: components/RatingStar y components/SocialNetworks)
