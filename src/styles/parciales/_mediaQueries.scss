@@ -2,6 +2,17 @@
     .item__detail {
         flex-direction: column;
     }
+    .form {
+        justify-content: center;
+    }
+    .checkout__items {
+        margin: 1rem 0;
+        padding-left: 0 !important;
+
+        &-card {
+            justify-content: center;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {

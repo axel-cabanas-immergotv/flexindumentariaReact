@@ -78,7 +78,7 @@ export default function CheckoutContainer () {
             (
                 <section>
                     <NavBar category1='Productos' category2='Ayuda' category3='Acerca de' category4='Contacto' />
-                    <div className="d-flex mt-5 container-lg flex-wrap">
+                    <div className="d-flex mt-5 form container-lg flex-wrap">
                         <div className="input__full-container p-3 col-md-7">
                             <h2 className="mb-4">Datos personales</h2>
                             <form onSubmit={handdleSubmit}>
@@ -142,7 +142,7 @@ export default function CheckoutContainer () {
                                 <p className="purchase-successful mt-3" style={{color: textBuy}} >{text}</p>
                             </form>
                         </div>
-                        <div className="col-md-5 col-12 p-left checkout__items">
+                        <div className="col-md-5 col-12 checkout__items">
                             {cart.map(item => {
                             return <Checkout 
                             product={item} 
