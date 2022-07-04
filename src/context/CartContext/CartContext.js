@@ -9,7 +9,7 @@ const CartProvider = ({children}) => {
     const [data, setData] = React.useState()
     console.log(cart)
 
-    const addItem = (item, count) => {
+    const addItem = (item, count, size, setText) => {
         if(isInCart(item.id)) {
             const newCart = cart.map(prod => {
                 if(prod.id === item.id) {
@@ -19,7 +19,12 @@ const CartProvider = ({children}) => {
             })
             setCart(newCart)
         } else {
-            setCart([...cart, {...item, quantity: count}]) ;
+            if(size === '') {
+                setText('Elija un talle');
+            } else {
+                setCart([...cart, {...item, quantity: count, size: size}])
+                setText('');
+            }
         }
 
     }

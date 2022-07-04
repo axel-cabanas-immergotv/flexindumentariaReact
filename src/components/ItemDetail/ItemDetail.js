@@ -7,14 +7,25 @@ import ItemCount from "../ItemCount/ItemCount";
 export default function ItemDetail ({product, id}) {
     const {addItem, isInCart} = React.useContext(CartContext);
     const [count, setCount] = React.useState(1);
+    const [size, setSize] = React.useState("");
+    const [text, setText] = React.useState("");
+    const [border, setBorder] = React.useState();
     const navigate = useNavigate();
 
     const Button = () => {
         if(product.stock === 0) {
             return <Link to='/products'><button className="item__detail-btn-cart mt-2">Ir a la tienda</button></Link>
         } else {
-            return <button className="item__detail-btn-cart mt-2" onClick={() => addItem(product, count)}>Agregar al carrito</button>
+            return <button className="item__detail-btn-cart mt-2" onClick={() => addItem(product, count, size, setText)}>Agregar al carrito</button>
         }
+    }
+
+    // add size to cart
+    const handleSize = (event) => {
+        const { value } = event.target;
+        setSize(value);
+        setBorder('rgb(6 173 53)');
+        console.log(value);
     }
 
     return (
@@ -39,10 +50,11 @@ export default function ItemDetail ({product, id}) {
                         
                         <div className="item__detail-talles mt-4">
                             <p className="mt-2 mb-2 ">Talle:</p>
-                            <button className="item__detail-talles-btn">S</button>
-                            <button className="item__detail-talles-btn">M</button>
-                            <button className="item__detail-talles-btn">L</button>
-                            <button className="item__detail-talles-btn">XL</button>
+                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='S'  />
+                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='M' />
+                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='L' />
+                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='XL' />
+                            <p style={{color: 'rgb(205, 9, 9)'}}>{text}</p>
                         </div>
                         <div className="item__detail-btn d-flex flex-column mt-4">
                             {
