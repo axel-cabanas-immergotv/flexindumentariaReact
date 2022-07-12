@@ -23,7 +23,6 @@ export default function ItemDetail ({product, id}) {
         // destrocturing event.target
         const { value, id } = event.target;
         const { children } = event.target.parentNode;
-        console.log(children)
         // HTMLCollection to Array
         const array = Array.from(children);
         // filter array
@@ -99,17 +98,16 @@ export default function ItemDetail ({product, id}) {
                 ) :
                 (
                 <div className="container-lg">
-                    <div class="cart__container-empty">
+                    <div className="cart__container-empty">
                         <h1>El producto no existe</h1>
                         <a href="/products">
-                            <button class="item__detail-btn-link-buy">Ir a la tienda</button>
+                            <button className="item__detail-btn-link-buy">Ir a la tienda</button>
                         </a>
                     </div>
                 </div>
                 
                 )
             }
-            
         </section>
     )
 }
