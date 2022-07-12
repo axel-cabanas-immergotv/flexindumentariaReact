@@ -23,7 +23,6 @@ const CartProvider = ({children}) => {
                 setText('Elija un talle');
             } else {
                 setCart([...cart, {...item, quantity: count, size: size}])
-                setText('');
             }
         }
 

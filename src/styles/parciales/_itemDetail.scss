@@ -42,15 +42,15 @@
             }
         }
     }
+    .item__detail-talles-btn-active {
+        @extend .item__detail-talles-btn;
+        border: 2px solid #b09e80;
+    }
     
     .item__detail-btn {
         &-link {
             display: contents;
-            
-    
-            
         }
-        
     }
 }
 .item__detail-btn-link-buy {

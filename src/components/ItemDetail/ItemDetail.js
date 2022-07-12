@@ -10,7 +10,6 @@ export default function ItemDetail ({product, id}) {
     const [size, setSize] = React.useState("");
     const [text, setText] = React.useState("");
     const [border, setBorder] = React.useState();
-    const navigate = useNavigate();
 
     const Button = () => {
         if(product.stock === 0) {
@@ -20,12 +19,24 @@ export default function ItemDetail ({product, id}) {
         }
     }
 
-    // add size to cart
     const handleSize = (event) => {
-        const { value } = event.target;
+        // destrocturing event.target
+        const { value, id } = event.target;
+        const { children } = event.target.parentNode;
+        console.log(children)
+        // HTMLCollection to Array
+        const array = Array.from(children);
+        // filter array
+        array.filter (child => {
+            if(child.className === "item__detail-talles-btn-active") {
+                return child.className = "item__detail-talles-btn";
+            }
+        });
+        // add class active
+        const element = document.getElementById(id);
+        element.className = "item__detail-talles-btn-active";
         setSize(value);
-        setBorder('rgb(6 173 53)');
-        console.log(value);
+        setText("");
     }
 
     return (
@@ -47,15 +58,16 @@ export default function ItemDetail ({product, id}) {
                         
                             <p className="item__detail-info-price mt-3">${product.price}</p>
                         </div>
-                        
-                        <div className="item__detail-talles mt-4">
-                            <p className="mt-2 mb-2 ">Talle:</p>
-                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='S'  />
-                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='M' />
-                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='L' />
-                            <input onClick={handleSize} style={{'border-color': border}} type='button' className="item__detail-talles-btn" value='XL' />
-                            <p style={{color: 'rgb(205, 9, 9)'}}>{text}</p>
+                        <p className="mt-4 mb-2">Talle:</p>
+                        <div className="item__detail-talles">
+                            
+                            <input onClick={handleSize} type='button' id="S" className="item__detail-talles-btn" value='S'  />
+                            <input onClick={handleSize} type='button' id="M" className="item__detail-talles-btn" value='M' />
+                            <input onClick={handleSize} type='button' id="L" className="item__detail-talles-btn" value='L' />
+                            <input onClick={handleSize} type='button' id="XL" className="item__detail-talles-btn" value='XL' />
+                            
                         </div>
+                        <p style={{color: 'rgb(205, 9, 9)'}}>{text}</p>
                         <div className="item__detail-btn d-flex flex-column mt-4">
                             {
                                 isInCart(product.id)
