@@ -9,7 +9,6 @@ export default function ItemDetail ({product, id}) {
     const [count, setCount] = React.useState(1);
     const [size, setSize] = React.useState("");
     const [text, setText] = React.useState("");
-    const [border, setBorder] = React.useState();
 
     const Button = () => {
         if(product.stock === 0) {
@@ -19,23 +18,9 @@ export default function ItemDetail ({product, id}) {
         }
     }
 
-    const handleSize = (event) => {
-        // destrocturing event.target
-        const { value, id } = event.target;
-        const { children } = event.target.parentNode;
-        // HTMLCollection to Array
-        const array = Array.from(children);
-        // filter array
-        array.filter (child => {
-            if(child.className === "item__detail-talles-btn-active") {
-                return child.className = "item__detail-talles-btn";
-            }
-        });
-        // add class active
-        const element = document.getElementById(id);
-        element.className = "item__detail-talles-btn-active";
-        setSize(value);
-        setText("");
+    const handleSize = (event) => setSize(event);
+    const getBtnSizeClass = (currentSize) => {
+        return `item__detail-talles-btn${currentSize === size  ? '-active' : ''}`;
     }
 
     return (
@@ -59,12 +44,10 @@ export default function ItemDetail ({product, id}) {
                         </div>
                         <p className="mt-4 mb-2">Talle:</p>
                         <div className="item__detail-talles">
-                            
-                            <input onClick={handleSize} type='button' id="S" className="item__detail-talles-btn" value='S'  />
-                            <input onClick={handleSize} type='button' id="M" className="item__detail-talles-btn" value='M' />
-                            <input onClick={handleSize} type='button' id="L" className="item__detail-talles-btn" value='L' />
-                            <input onClick={handleSize} type='button' id="XL" className="item__detail-talles-btn" value='XL' />
-                            
+                            <button onClick={() => handleSize('S')} type="button" class={getBtnSizeClass('S')} >S</button>
+                            <button onClick={() => handleSize('M')} type="button" class={getBtnSizeClass('M')} >M</button>
+                            <button onClick={() => handleSize('L')} type="button" class={getBtnSizeClass('L')} >L</button>
+                            <button onClick={() => handleSize('XL')} type="button" class={getBtnSizeClass('XL')} >XL</button>
                         </div>
                         <p style={{color: 'rgb(205, 9, 9)'}}>{text}</p>
                         <div className="item__detail-btn d-flex flex-column mt-4">

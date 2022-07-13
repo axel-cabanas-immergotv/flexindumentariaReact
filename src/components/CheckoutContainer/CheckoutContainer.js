@@ -10,7 +10,6 @@ export default function CheckoutContainer () {
     const { cart, data, setData, total } = React.useContext(CartContext);
     const [text, setText] = React.useState("");
     const [textBuy, setTextBuy] = React.useState("");
-    console.log(data)
 
     const handdleChange = (event) => {
         const { name, value } = event.target;
